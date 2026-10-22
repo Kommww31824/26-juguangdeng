@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://b0ssjpak43pac"]
+
+[ext_resource type="Script" uid="uid://d20h8ftdsrvry" path="res://scenes/提交订单页.gd" id="1_jw6ov"]
+[ext_resource type="Texture2D" uid="uid://cl1k7v4dkv66u" path="res://美术素材/内容层.png" id="2_2xwdl"]
+[ext_resource type="PackedScene" uid="uid://bg82urxn6m1k8" path="res://scenes/退出键.tscn" id="2_quit"]
+[ext_resource type="Texture2D" uid="uid://hpyf3hoy0a5d" path="res://美术素材/Frame 9_2.png" id="3_jwx2m"]
+[ext_resource type="StyleBox" uid="uid://b1f7ito2jgxqx" path="res://new_style_box_flat.tres" id="3_w02ff"]
+[ext_resource type="Texture2D" uid="uid://b3q7pel6ou4y" path="res://美术素材/拼好饭3.png" id="3_w5vdm"]
+[ext_resource type="Texture2D" uid="uid://d1e855hbuvjks" path="res://icon.svg" id="4_sdnko"]
+[ext_resource type="Texture2D" uid="uid://ciyesh73t2um4" path="res://美术素材/Group 4506.png" id="6_ub24o"]
+
+[node name="提交订单页" type="Node2D" unique_id=130568212]
+script = ExtResource("1_jw6ov")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1788202419]
+physics_interpolation_mode = 0
+offset_left = 1294.0
+offset_top = 33.799988
+offset_right = 1777.0
+offset_bottom = 1050.8
+color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1263222894]
+position = Vector2(1530.0001, 348)
+scale = Vector2(0.96, 1)
+texture = ExtResource("2_2xwdl")
+
+[node name="名字Label" type="Label" parent="." unique_id=2144209493]
+offset_left = 1426.0
+offset_top = 183.0
+offset_right = 1620.0
+offset_bottom = 218.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "七八九麻辣烫3荤8素+主食
+（不看备注）"
+autowrap_mode = 1
+text_overrun_behavior = 1
+
+[node name="价格Label" type="Label" parent="." unique_id=1778302116]
+offset_left = 1664.0
+offset_top = 185.0
+offset_right = 1814.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "¥12.73"
+
+[node name="小计Label" type="Label" parent="." unique_id=1938293469]
+offset_left = 1630.0
+offset_top = 338.0
+offset_right = 1761.0
+offset_bottom = 405.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "¥12.73"
+
+[node name="支付方式Label" type="Label" parent="." unique_id=1274025054]
+visible = false
+offset_left = 1355.0
+offset_top = 532.0
+offset_right = 1505.0
+offset_bottom = 599.0
+theme_override_font_sizes/font_size = 20
+text = "负宝支付√"
+
+[node name="Button" type="Button" parent="." unique_id=1702773273]
+offset_left = 1292.0
+offset_top = 960.0
+offset_right = 1606.0
+offset_bottom = 1014.0
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.47397602, 0.4739756, 0.47397572, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.4745098, 0.4745098, 0.4745098, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("3_w02ff")
+theme_override_styles/pressed = ExtResource("3_w02ff")
+theme_override_styles/hover = ExtResource("3_w02ff")
+icon = ExtResource("3_jwx2m")
+icon_alignment = 1
+
+[node name="钱不够提示" type="Label" parent="." unique_id=827683100]
+offset_left = 1316.0
+offset_top = 620.0
+offset_right = 1783.0
+offset_bottom = 675.0
+theme_override_colors/font_color = Color(0.9, 0.25, 0.25, 1)
+theme_override_font_sizes/font_size = 28
+text = "钱不够 15，买不了这顿。"
+
+[node name="退出键" parent="." unique_id=1723419409 instance=ExtResource("2_quit")]
+offset_left = 1301.0
+offset_top = 98.0
+offset_right = 1354.0
+offset_bottom = 140.0
+theme_override_styles/normal = ExtResource("3_w02ff")
+theme_override_styles/pressed = ExtResource("3_w02ff")
+theme_override_styles/hover = ExtResource("3_w02ff")
+theme_override_styles/disabled = ExtResource("3_w02ff")
+theme_override_styles/focus = ExtResource("3_w02ff")
+text = ""
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2132634887]
+visible = false
+modulate = Color(1, 1, 1, 0.29803923)
+position = Vector2(1519, 541)
+scale = Vector2(1.3153334, 1.3153334)
+texture = ExtResource("3_w5vdm")
+
+[node name="小计Label2" type="Label" parent="." unique_id=1693252272]
+offset_left = 1346.0
+offset_top = 980.0
+offset_right = 1477.0
+offset_bottom = 1047.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "¥12.73"
+
+[node name="食物对应TextureRect" type="TextureRect" parent="." unique_id=1736967610]
+offset_left = 1334.9999
+offset_top = 184.0
+offset_right = 1462.9999
+offset_bottom = 312.0
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("4_sdnko")
+
+[node name="支付成功" type="Node2D" parent="." unique_id=1787426978]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="支付成功" unique_id=1843913948]
+physics_interpolation_mode = 0
+offset_left = 1298.0
+offset_top = 33.799988
+offset_right = 1777.0
+offset_bottom = 1050.8
+color = Color(0.8901961, 0.8901961, 0.8901961, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="支付成功" unique_id=597197779]
+position = Vector2(1403, 313)
+texture = ExtResource("6_ub24o")
+
+[node name="Label" type="Label" parent="支付成功" unique_id=12587741]
+offset_left = 1492.0
+offset_top = 289.0
+offset_right = 1636.0
+offset_bottom = 342.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "支付成功"
+
+[node name="Label2" type="Label" parent="支付成功" unique_id=1888360022]
+offset_left = 1465.0
+offset_top = 384.0
+offset_right = 1609.0
+offset_bottom = 437.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "您的余额"
+
+[node name="余额" type="Label" parent="支付成功" unique_id=184011094]
+offset_left = 1465.0
+offset_top = 465.0
+offset_right = 1609.0
+offset_bottom = 518.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "¥余额"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

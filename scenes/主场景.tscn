@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://cxntmuss838rf"]
+
+[ext_resource type="PackedScene" uid="uid://fjuhrp86bnef" path="res://scenes/手机桌面页.tscn" id="1_b4aud"]
+[ext_resource type="Script" uid="uid://8nvgevsjhlru" path="res://scenes/主场景.gd" id="1_yut5t"]
+[ext_resource type="Texture2D" uid="uid://tx204bjvairn" path="res://美术素材/背景2.png" id="2_agfxa"]
+[ext_resource type="PackedScene" uid="uid://06g1bxrdr3q3" path="res://scenes/拼好饭首页.tscn" id="2_q3bra"]
+[ext_resource type="PackedScene" uid="uid://i6qxo47nv4be" path="res://scenes/外卖详细页.tscn" id="3_mvsps"]
+[ext_resource type="Texture2D" uid="uid://cnl803uapqygo" path="res://美术素材/261004-4 1.png" id="3_xvt7q"]
+[ext_resource type="PackedScene" uid="uid://b0ssjpak43pac" path="res://scenes/提交订单页.tscn" id="5_alk0a"]
+[ext_resource type="PackedScene" uid="uid://2jplqlukri3s" path="res://scenes/订单进度页.tscn" id="6_lnahv"]
+[ext_resource type="PackedScene" uid="uid://djfg634xaw01o" path="res://scenes/门.tscn" id="7_8ujq8"]
+[ext_resource type="Texture2D" uid="uid://l75hklhvlinm" path="res://美术素材/手/hand02 1.png" id="8_a44jh"]
+[ext_resource type="PackedScene" uid="uid://btjvjtwpqej7a" path="res://scenes/吃饭场景.tscn" id="8_chi"]
+[ext_resource type="Shader" uid="uid://dnv6di7tw13md" path="res://scenes/毒.gdshader" id="11_a44jh"]
+[ext_resource type="Texture2D" uid="uid://d1ih88jnb0x6" path="res://美术素材/261004-3 1.png" id="11_agfxa"]
+[ext_resource type="Shader" uid="uid://dsamc5csowolq" path="res://黑框shader.gdshader" id="12_wukek"]
+[ext_resource type="Texture2D" uid="uid://dhbui2hdv2gdv" path="res://美术素材/Group 4521.png" id="16_4oyjo"]
+[ext_resource type="Texture2D" uid="uid://ci77c7fx3oyvm" path="res://美术素材/261004头2 1.png" id="17_b6vd2"]
+[ext_resource type="PackedScene" uid="uid://dqanh0a6ppgqt" path="res://scenes/健康值为0.tscn" id="17_ijsdu"]
+[ext_resource type="PackedScene" uid="uid://b0fdk0cmh3ssg" path="res://scenes/黑屏说话.tscn" id="18_4oyjo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xvt7q"]
+shader = ExtResource("12_wukek")
+shader_parameter/brightness = 1.02
+shader_parameter/contrast = 1.08
+shader_parameter/saturation = 1.0000000475
+shader_parameter/gamma = 1.05
+shader_parameter/curvature = 0.0
+shader_parameter/corner_soften = 0.06
+shader_parameter/vignette = 0.50000002375
+shader_parameter/scanline_strength = 0.0
+shader_parameter/scanline_density = 3.0
+shader_parameter/interlace_strength = 0.0
+shader_parameter/mask_strength = 0.22
+shader_parameter/mask_scale = 1.0
+shader_parameter/chroma_offset_px = 0.0
+shader_parameter/luma_smear_px = 0.0
+shader_parameter/jitter_px = 0.0
+shader_parameter/wobble_px = 0.0
+shader_parameter/tape_noise = 0.0
+shader_parameter/tape_lines = 0.0
+shader_parameter/roll_speed = 0.0
+shader_parameter/roll_strength = 0.0
+shader_parameter/glow_strength = 0.0
+shader_parameter/glow_threshold = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wukek"]
+shader = ExtResource("11_a44jh")
+shader_parameter/VIEWPORT_SIZE = Vector2(0, 0)
+shader_parameter/intensity = 0.1270000060325
+shader_parameter/speed = 1.0
+shader_parameter/rotate_amt = 0.03
+shader_parameter/wave_x = 0.010000000475
+shader_parameter/wave_y = 0.010000000475
+shader_parameter/chromatic_aberration = 0.010000000475
+shader_parameter/poison_tint = Color(0.69188184, 0.9894058, 0.6339829, 1)
+shader_parameter/tint_amount = 0.35
+shader_parameter/desat = 0.25
+shader_parameter/grain = 0.06
+shader_parameter/vignette = 0.5
+shader_parameter/bubble_color = Color(1, 0.85, 0.2, 1)
+shader_parameter/bubble_amount = 0.406000019285
+shader_parameter/bubble_size = 0.16400000779
+shader_parameter/bubble_count = 8.0
+shader_parameter/bubble_speed = 0.30000001192093
+shader_parameter/bubble_deform = 1.0
+shader_parameter/bubble_stretch = 0.4
+shader_parameter/bubble_bend = 0.3
+shader_parameter/bubble_hollow = 0.5
+shader_parameter/bubble_edge_color = Color(0.3, 0.6, 1, 1)
+shader_parameter/bubble_edge_amount = 0.5
+
+[node name="主场景" type="Node2D" unique_id=335301951]
+script = ExtResource("1_yut5t")
+
+[node name="bg" type="Sprite2D" parent="." unique_id=1228025287]
+position = Vector2(960, 539)
+texture = ExtResource("2_agfxa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=255086990]
+position = Vector2(666, 97)
+texture = ExtResource("3_xvt7q")
+
+[node name="当前钱数" type="Label" parent="." unique_id=2133287748]
+offset_left = 162.0
+offset_top = 53.0
+offset_right = 505.0
+offset_bottom = 136.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "￥ 60.00"
+
+[node name="当前健康" type="Label" parent="." unique_id=2013577332]
+offset_left = 444.0
+offset_top = 59.0
+offset_right = 939.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "健康 ♥♥♥♥♥"
+
+[node name="当前天数" type="Label" parent="." unique_id=1232652622]
+offset_left = 891.0
+offset_top = 59.0
+offset_right = 1311.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "10/14 11:00"
+
+[node name="女主" type="Sprite2D" parent="." unique_id=682966484]
+position = Vector2(960, 540)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=317578292]
+position = Vector2(960, 540)
+texture = ExtResource("11_agfxa")
+
+[node name="手机桌面页" parent="." unique_id=661122227 instance=ExtResource("1_b4aud")]
+position = Vector2(48, 0)
+
+[node name="拼好饭首页" parent="." unique_id=1929013913 instance=ExtResource("2_q3bra")]
+visible = false
+position = Vector2(56, 0)
+
+[node name="外卖详细页" parent="." unique_id=1623592888 instance=ExtResource("3_mvsps")]
+visible = false
+position = Vector2(56, 0)
+
+[node name="提交订单页" parent="." unique_id=130568212 instance=ExtResource("5_alk0a")]
+visible = false
+position = Vector2(57, 0)
+
+[node name="订单进度页" parent="." unique_id=316790003 instance=ExtResource("6_lnahv")]
+position = Vector2(54, 0)
+
+[node name="黑屏" type="ColorRect" parent="." unique_id=1449294623]
+physics_interpolation_mode = 0
+offset_left = 1321.0
+offset_top = 33.799988
+offset_right = 1821.0
+offset_bottom = 1050.8
+color = Color(0, 0, 0, 1)
+
+[node name="门" parent="." unique_id=1971346790 instance=ExtResource("7_8ujq8")]
+visible = false
+
+[node name="吃饭场景" parent="." unique_id=420748345 instance=ExtResource("8_chi")]
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=999511696]
+visible = false
+material = SubResource("ShaderMaterial_xvt7q")
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="手" type="Sprite2D" parent="." unique_id=897946250]
+position = Vector2(982, 540)
+texture = ExtResource("8_a44jh")
+
+[node name="全黑" type="ColorRect" parent="." unique_id=1300553579]
+visible = false
+z_index = 80
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="取外卖前对话" type="Node2D" parent="." unique_id=1651859182]
+visible = false
+z_index = 10
+
+[node name="对话框" type="Sprite2D" parent="取外卖前对话" unique_id=1793312311]
+position = Vector2(519, 521)
+texture = ExtResource("16_4oyjo")
+
+[node name="外卖到了Label" type="Label" parent="取外卖前对话" unique_id=1092365029]
+offset_left = 281.0
+offset_top = 495.0
+offset_right = 500.0
+offset_bottom = 543.0
+theme_override_font_sizes/font_size = 32
+text = "嗯，外卖到了..."
+
+[node name="女主头像" type="Sprite2D" parent="取外卖前对话" unique_id=579600313]
+position = Vector2(1018, 504)
+texture = ExtResource("17_b6vd2")
+
+[node name="点击继续" type="Button" parent="取外卖前对话" unique_id=1707030610]
+offset_right = 1920.0
+offset_bottom = 1080.0
+focus_mode = 0
+flat = true
+
+[node name="毒效果" type="ColorRect" parent="." unique_id=392960322]
+visible = false
+material = SubResource("ShaderMaterial_wukek")
+offset_right = 1911.0
+offset_bottom = 1103.0
+mouse_filter = 2
+
+[node name="健康值为0" parent="." unique_id=498733412 instance=ExtResource("17_ijsdu")]
+visible = false
+
+[node name="黑屏说话" parent="." unique_id=1050410936 instance=ExtResource("18_4oyjo")]
+visible = false

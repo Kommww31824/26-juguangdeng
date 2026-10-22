@@ -1,0 +1,339 @@
+[gd_scene format=3 uid="uid://06g1bxrdr3q3"]
+
+[ext_resource type="Script" uid="uid://368klkpul5xy" path="res://scenes/拼好饭首页.gd" id="1_ynsd2"]
+[ext_resource type="Texture2D" uid="uid://bmlhr6fx207hl" path="res://美术素材/拼好饭1017.png" id="2_ja1yd"]
+[ext_resource type="PackedScene" uid="uid://bg82urxn6m1k8" path="res://scenes/退出键.tscn" id="2_quit"]
+[ext_resource type="Texture2D" uid="uid://di0gq4u1360mu" path="res://美术素材/261004-b 1.png" id="3_6jr0a"]
+[ext_resource type="Texture2D" uid="uid://cggcs6byno4mp" path="res://美术素材/header.png" id="3_qjuew"]
+[ext_resource type="Texture2D" uid="uid://bwqi8xf1yxf71" path="res://美术素材/Frame 2610453.png" id="5_82m4p"]
+[ext_resource type="StyleBox" uid="uid://b1f7ito2jgxqx" path="res://new_style_box_flat.tres" id="6_ie77h"]
+[ext_resource type="Texture2D" uid="uid://cmm4rhgjp8gb2" path="res://美术素材/Rectangle 74.png" id="6_y06or"]
+[ext_resource type="Texture2D" uid="uid://bqv5blxt61lia" path="res://美术素材/Group 4506_2.png" id="7_b30pq"]
+[ext_resource type="Texture2D" uid="uid://deox6gxoeaeyo" path="res://美术素材/Group 4503.png" id="7_ie77h"]
+[ext_resource type="Script" uid="uid://blth43n2d72va" path="res://scenes/签到按钮空心圆.gd" id="8_6b3qq"]
+[ext_resource type="Texture2D" uid="uid://c818xax6xjdq0" path="res://美术素材/Frame 10.png" id="8_wqlpj"]
+[ext_resource type="Texture2D" uid="uid://b27cahqr1c1g5" path="res://美术素材/Vector1018.png" id="11_qjuew"]
+[ext_resource type="Texture2D" uid="uid://dlq1m1ag04wur" path="res://美术素材/抽奖素材/恭喜您!.png" id="14_ktnkh"]
+[ext_resource type="Texture2D" uid="uid://du1f1ojch8p8k" path="res://美术素材/抽奖素材/连续签到七天获得免费抽奖机会!.png" id="15_ja1yd"]
+[ext_resource type="Texture2D" uid="uid://cp1tnc1lg5j4s" path="res://美术素材/抽奖素材/Group 4513.png" id="16_ja1yd"]
+[ext_resource type="Texture2D" uid="uid://dtl0v6y17xjef" path="res://美术素材/抽奖素材/Frame 2610467.png" id="17_ja1yd"]
+[ext_resource type="Texture2D" uid="uid://od5tykr5qcc4" path="res://美术素材/抽奖素材/Polygon 1.png" id="17_qjuew"]
+
+[node name="拼好饭首页" type="Node2D" unique_id=1929013913]
+script = ExtResource("1_ynsd2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=929068036]
+physics_interpolation_mode = 0
+offset_left = 1289.0
+offset_top = 33.799988
+offset_right = 1777.0
+offset_bottom = 1050.8
+color = Color(0.9529412, 0.9529412, 0.9529412, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=938242724]
+visible = false
+position = Vector2(844.99994, 546)
+scale = Vector2(1.0272222, 1.027222)
+texture = ExtResource("2_ja1yd")
+
+[node name="饭背景" type="Sprite2D" parent="." unique_id=937098967]
+position = Vector2(1533, 129)
+scale = Vector2(1.042735, 1.0326087)
+texture = ExtResource("3_qjuew")
+
+[node name="标题字" type="Sprite2D" parent="." unique_id=1043394141]
+visible = false
+position = Vector2(1524, 121.00001)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_6jr0a")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=188079776]
+offset_left = 1306.0
+offset_top = 224.0
+offset_right = 1781.0
+offset_bottom = 996.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=885169799]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="签到" type="Control" parent="ScrollContainer/VBoxContainer" unique_id=1447306212]
+custom_minimum_size = Vector2(450, 220)
+layout_mode = 2
+
+[node name="签到按钮" type="Button" parent="ScrollContainer/VBoxContainer/签到" unique_id=2059292263]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 14.0
+offset_right = 454.0
+offset_bottom = 223.0
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+theme_override_styles/disabled = ExtResource("6_ie77h")
+theme_override_styles/focus = ExtResource("6_ie77h")
+icon = ExtResource("5_82m4p")
+
+[node name="签到文本" type="Label" parent="ScrollContainer/VBoxContainer/签到/签到按钮" unique_id=251233475]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 12.0
+offset_right = 287.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "已连续签到0天"
+
+[node name="黄色空心圆下图" type="Sprite2D" parent="ScrollContainer/VBoxContainer/签到/签到按钮" unique_id=1417812889]
+position = Vector2(46, 108)
+texture = ExtResource("6_y06or")
+
+[node name="黄色空心圆下图2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/签到/签到按钮" unique_id=1044302377]
+position = Vector2(104, 108)
+texture = ExtResource("6_y06or")
+
+[node name="黄色空心圆下图3" type="Sprite2D" parent="ScrollContainer/VBoxContainer/签到/签到按钮" unique_id=1585099285]
+position = Vector2(163, 108)
+texture = ExtResource("6_y06or")
+
+[node name="黄色空心圆下图4" type="Sprite2D" parent="ScrollContainer/VBoxContainer/签到/签到按钮" unique_id=1080036114]
+position = Vector2(221, 108)
+texture = ExtResource("6_y06or")
+
+[node name="黄色空心圆下图5" type="Sprite2D" parent="ScrollContainer/VBoxContainer/签到/签到按钮" unique_id=813004262]
+position = Vector2(279, 108)
+texture = ExtResource("6_y06or")
+
+[node name="黄色空心圆下图6" type="Sprite2D" parent="ScrollContainer/VBoxContainer/签到/签到按钮" unique_id=809310409]
+position = Vector2(338, 108)
+texture = ExtResource("6_y06or")
+
+[node name="黄色空心圆下图7" type="Sprite2D" parent="ScrollContainer/VBoxContainer/签到/签到按钮" unique_id=189769750]
+position = Vector2(396, 108)
+texture = ExtResource("6_y06or")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/签到" unique_id=1947242216]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 63.0
+offset_right = 433.0
+offset_bottom = 161.0
+theme_override_constants/separation = 32
+
+[node name="签到按钮空心圆" type="Button" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer" unique_id=39744572]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+theme_override_styles/disabled = ExtResource("6_ie77h")
+icon = ExtResource("7_b30pq")
+script = ExtResource("8_6b3qq")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆" unique_id=722766681]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 68.0
+offset_right = 37.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "周一"
+
+[node name="签到按钮空心圆2" type="Button" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer" unique_id=1306499477]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+theme_override_styles/disabled = ExtResource("6_ie77h")
+icon = ExtResource("7_b30pq")
+script = ExtResource("8_6b3qq")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆2" unique_id=609941305]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 68.0
+offset_right = 37.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "周二"
+
+[node name="签到按钮空心圆3" type="Button" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer" unique_id=447520301]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+theme_override_styles/disabled = ExtResource("6_ie77h")
+icon = ExtResource("7_b30pq")
+script = ExtResource("8_6b3qq")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆3" unique_id=56664039]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 68.0
+offset_right = 37.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "周三"
+
+[node name="签到按钮空心圆4" type="Button" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer" unique_id=779216615]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+theme_override_styles/disabled = ExtResource("6_ie77h")
+icon = ExtResource("7_b30pq")
+script = ExtResource("8_6b3qq")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆4" unique_id=1546949415]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 68.0
+offset_right = 37.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "周四"
+
+[node name="签到按钮空心圆5" type="Button" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer" unique_id=2061867037]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+theme_override_styles/disabled = ExtResource("6_ie77h")
+icon = ExtResource("7_b30pq")
+script = ExtResource("8_6b3qq")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆5" unique_id=1012188650]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 68.0
+offset_right = 37.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "周五"
+
+[node name="签到按钮空心圆6" type="Button" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer" unique_id=1478375446]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+theme_override_styles/disabled = ExtResource("6_ie77h")
+icon = ExtResource("7_b30pq")
+script = ExtResource("8_6b3qq")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆6" unique_id=551057130]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 68.0
+offset_right = 37.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "周六"
+
+[node name="签到按钮空心圆7" type="Button" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer" unique_id=1532543449]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+theme_override_styles/disabled = ExtResource("6_ie77h")
+icon = ExtResource("7_b30pq")
+script = ExtResource("8_6b3qq")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆7" unique_id=1337427525]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 68.0
+offset_right = 37.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "周日"
+
+[node name="退出键" parent="." unique_id=1240524898 instance=ExtResource("2_quit")]
+offset_left = 1290.0
+offset_top = 99.0
+offset_right = 1362.0
+offset_bottom = 159.0
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+text = ""
+
+[node name="Sprite2D" type="Sprite2D" parent="退出键" unique_id=213815297]
+position = Vector2(34, 30)
+texture = ExtResource("11_qjuew")
+
+[node name="开屏" type="Node2D" parent="." unique_id=1942200458]
+visible = false
+
+[node name="背景" type="ColorRect" parent="开屏" unique_id=701252891]
+physics_interpolation_mode = 0
+offset_left = 1292.0
+offset_top = 33.799988
+offset_right = 1777.0
+offset_bottom = 1050.8
+color = Color(1, 0.9490196, 0, 1)
+
+[node name="图标" type="Sprite2D" parent="开屏" unique_id=557422819]
+position = Vector2(1519.0001, 435.00003)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("7_ie77h")
+
+[node name="优惠券" type="Button" parent="." unique_id=2025545295]
+visible = false
+offset_left = 1300.0
+offset_top = 69.0
+offset_right = 1672.0
+offset_bottom = 173.0
+scale = Vector2(1.25, 1.25)
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+theme_override_styles/disabled = ExtResource("6_ie77h")
+theme_override_styles/focus = ExtResource("6_ie77h")
+icon = ExtResource("8_wqlpj")
+
+[node name="抽奖页面" type="Node2D" parent="." unique_id=238745930]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="抽奖页面" unique_id=1156166972]
+offset_left = 1277.0
+offset_top = 35.0
+offset_right = 1777.0
+offset_bottom = 1051.0
+color = Color(0, 0, 0, 0.5058824)
+
+[node name="恭喜您" type="Sprite2D" parent="抽奖页面" unique_id=584011039]
+position = Vector2(1521, 210)
+texture = ExtResource("14_ktnkh")
+
+[node name="文本2" type="Sprite2D" parent="抽奖页面" unique_id=1243825602]
+position = Vector2(1524, 300)
+texture = ExtResource("15_ja1yd")
+
+[node name="转盘" type="Sprite2D" parent="抽奖页面" unique_id=506198376]
+position = Vector2(1525, 601)
+texture = ExtResource("16_ja1yd")
+
+[node name="指针" type="Sprite2D" parent="抽奖页面" unique_id=1250531099]
+position = Vector2(1515, 385)
+texture = ExtResource("17_qjuew")
+
+[node name="点击抽奖按钮" type="Button" parent="抽奖页面" unique_id=1264454006]
+offset_left = 1364.0
+offset_top = 836.0
+offset_right = 1690.0
+offset_bottom = 978.0
+theme_override_styles/normal = ExtResource("6_ie77h")
+theme_override_styles/pressed = ExtResource("6_ie77h")
+theme_override_styles/hover = ExtResource("6_ie77h")
+theme_override_styles/disabled = ExtResource("6_ie77h")
+theme_override_styles/focus = ExtResource("6_ie77h")
+icon = ExtResource("17_ja1yd")
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆" to="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆" method="_on_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆2" to="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆2" method="_on_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆3" to="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆3" method="_on_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆4" to="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆4" method="_on_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆5" to="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆5" method="_on_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆6" to="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆6" method="_on_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆7" to="ScrollContainer/VBoxContainer/签到/HBoxContainer/签到按钮空心圆7" method="_on_pressed"]

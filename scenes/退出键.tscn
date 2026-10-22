@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bg82urxn6m1k8"]
+
+[ext_resource type="Script" uid="uid://n4woec60ptxt" path="res://scenes/退出键.gd" id="1_quit"]
+
+[node name="退出键" type="Button" unique_id=1957218919]
+offset_left = 1688.0
+offset_top = 12.0
+offset_right = 1848.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 40
+text = "<"
+script = ExtResource("1_quit")

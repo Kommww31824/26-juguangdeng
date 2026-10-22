@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://btjvjtwpqej7a"]
+
+[ext_resource type="Script" uid="uid://bf1l7gd04k6od" path="res://scenes/吃饭场景.gd" id="1_chi"]
+[ext_resource type="Texture2D" uid="uid://i3qw6moss2po" path="res://美术素材/特殊吃外卖演出/麻辣烫/0_desk 1.png" id="2_ht3qe"]
+[ext_resource type="PackedScene" uid="uid://bg82urxn6m1k8" path="res://scenes/退出键.tscn" id="2_quit"]
+[ext_resource type="Texture2D" uid="uid://d1e855hbuvjks" path="res://icon.svg" id="3_icon"]
+[ext_resource type="Texture2D" uid="uid://bu0wos1jtd3j1" path="res://美术素材/Rectangle 92.png" id="5_0o5wa"]
+[ext_resource type="Texture2D" uid="uid://doooidwmm64ic" path="res://美术素材/吃饭阶段相关素材/吃饭时女主头像.png" id="5_avatar"]
+[ext_resource type="Texture2D" uid="uid://di6lcv6e07amh" path="res://美术素材/悬停时红色选项框.png" id="6_hover"]
+[ext_resource type="Texture2D" uid="uid://resngl0je7da" path="res://美术素材/红色选项框.png" id="6_opt"]
+[ext_resource type="Texture2D" uid="uid://yi5oovn3tys5" path="res://美术素材/按下时红色选项框.png" id="6_press"]
+[ext_resource type="PackedScene" uid="uid://6t1jex7vmrym" path="res://scenes/结算页.tscn" id="7_结算"]
+[ext_resource type="StyleBox" uid="uid://b1f7ito2jgxqx" path="res://new_style_box_flat.tres" id="9_i3rjx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opt"]
+content_margin_left = 28.0
+content_margin_top = 24.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+texture = ExtResource("6_opt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_press"]
+content_margin_left = 28.0
+content_margin_top = 24.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+texture = ExtResource("6_press")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hover"]
+content_margin_left = 28.0
+content_margin_top = 24.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+texture = ExtResource("6_hover")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opt"]
+
+[node name="吃饭场景" type="Node2D" unique_id=1712898727]
+script = ExtResource("1_chi")
+
+[node name="背景" type="ColorRect" parent="." unique_id=460861930]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.12, 0.1, 0.08, 1)
+
+[node name="桌垫板" type="Sprite2D" parent="." unique_id=1042034881]
+position = Vector2(960, 540)
+texture = ExtResource("2_ht3qe")
+
+[node name="饭占位" type="Sprite2D" parent="." unique_id=900932486]
+visible = false
+position = Vector2(960, 520)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_icon")
+
+[node name="主角头像" type="Sprite2D" parent="." unique_id=11256851]
+z_index = 30
+position = Vector2(364, 373)
+texture = ExtResource("5_avatar")
+
+[node name="对话框" type="ColorRect" parent="." unique_id=2008110316]
+z_index = 30
+offset_left = 420.0
+offset_top = 680.0
+offset_right = 1760.0
+offset_bottom = 900.0
+color = Color(0.12156863, 0.12156863, 0.14117648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="对话框" unique_id=1598964080]
+position = Vector2(590, 136)
+texture = ExtResource("5_0o5wa")
+
+[node name="对话文本" type="Label" parent="对话框" unique_id=1664374777]
+layout_mode = 0
+offset_left = -70.0
+offset_top = 35.0
+offset_right = 1202.0
+offset_bottom = 211.0
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 28
+autowrap_mode = 3
+
+[node name="点击推进" type="Button" parent="." unique_id=485312860]
+offset_right = 1920.0
+offset_bottom = 1080.0
+focus_mode = 0
+flat = true
+
+[node name="麻辣烫选项" type="VBoxContainer" parent="." unique_id=1483114612]
+z_index = 40
+offset_left = 789.0
+offset_top = 307.0
+offset_right = 1131.0
+offset_bottom = 629.0
+theme_override_constants/separation = 24
+
+[node name="不吃了" type="Button" parent="麻辣烫选项" unique_id=1509030906]
+custom_minimum_size = Vector2(342, 149)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_opt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_press")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hover")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_opt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_opt")
+text = "不吃了"
+
+[node name="算了吃吧" type="Button" parent="麻辣烫选项" unique_id=554773060]
+custom_minimum_size = Vector2(342, 149)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_opt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_press")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hover")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_opt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_opt")
+text = "算了吃吧"
+
+[node name="吃外卖" type="Button" parent="." unique_id=99792911]
+visible = false
+z_index = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("9_i3rjx")
+theme_override_styles/pressed = ExtResource("9_i3rjx")
+theme_override_styles/hover = ExtResource("9_i3rjx")
+theme_override_styles/disabled = ExtResource("9_i3rjx")
+theme_override_styles/focus = ExtResource("9_i3rjx")
+
+[node name="健康提示层" type="ColorRect" parent="." unique_id=696058793]
+visible = false
+z_index = 5
+offset_left = 560.0
+offset_top = 602.0
+offset_right = 1360.0
+offset_bottom = 822.0
+color = Color(0.15, 0.08, 0.08, 0.95)
+
+[node name="健康提示文本" type="Label" parent="健康提示层" unique_id=402494469]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 60.0
+offset_right = 760.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.95, 0.35, 0.35, 1)
+theme_override_font_sizes/font_size = 48
+text = "【健康-1】"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="黑屏" type="ColorRect" parent="." unique_id=268991417]
+visible = false
+z_index = 20
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="日期文字" type="Label" parent="黑屏" unique_id=1062957353]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -60.0
+offset_right = 400.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "10/15 🌙11:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="退出键" parent="." unique_id=1951529166 instance=ExtResource("2_quit")]
+visible = false
+offset_left = 920.0
+offset_top = 160.0
+offset_right = 1080.0
+offset_bottom = 230.0
+
+[node name="结算页" parent="." unique_id=1572938757 instance=ExtResource("7_结算")]
+visible = false
+z_index = 40

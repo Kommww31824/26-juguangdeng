@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dqanh0a6ppgqt"]
+
+[ext_resource type="Texture2D" uid="uid://daym5a3obmkx0" path="res://美术素材/结局素材/Frame 2610469.png" id="1_bg8hc"]
+[ext_resource type="Texture2D" uid="uid://cnppsurxq8i2n" path="res://美术素材/结局素材/感谢游玩图片.png" id="2_f7aqx"]
+[ext_resource type="Script" uid="uid://cf3p02bcgc7l7" path="res://scenes/健康值为0.gd" id="3_script"]
+
+[node name="健康值为0" type="CanvasLayer" unique_id=1782269626]
+layer = 100
+script = ExtResource("3_script")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2063584127]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1057201471]
+position = Vector2(960, 540)
+texture = ExtResource("1_bg8hc")
+
+[node name="Label" type="Label" parent="." unique_id=1954883047]
+offset_left = 264.0
+offset_top = 188.0
+offset_right = 1670.0
+offset_bottom = 895.0
+theme_override_colors/font_color = Color(0.15, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 28
+autowrap_mode = 3
+
+[node name="感谢游玩" type="Sprite2D" parent="." unique_id=1934826847]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(960, 540)
+texture = ExtResource("2_f7aqx")
+
+[node name="点击继续" type="Button" parent="." unique_id=747134677]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dnmodppmc682y"]
+
+[ext_resource type="Texture2D" uid="uid://dhyk68eo3sxiy" path="res://美术素材/Slide 16_9 - 饭异常1.png" id="1_lfvuh"]
+[ext_resource type="Script" uid="uid://b5afbj7mrpcyq" path="res://scenes/开始.gd" id="1_sttae"]
+[ext_resource type="StyleBox" uid="uid://b1f7ito2jgxqx" path="res://new_style_box_flat.tres" id="2_3u6mn"]
+
+[node name="开始" type="Node2D" unique_id=122798850]
+script = ExtResource("1_sttae")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=962975286]
+position = Vector2(960, 540)
+texture = ExtResource("1_lfvuh")
+
+[node name="Button" type="Button" parent="." unique_id=2025019228]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/normal = ExtResource("2_3u6mn")
+theme_override_styles/pressed = ExtResource("2_3u6mn")
+theme_override_styles/hover = ExtResource("2_3u6mn")
+theme_override_styles/disabled = ExtResource("2_3u6mn")
+theme_override_styles/focus = ExtResource("2_3u6mn")
+
+[node name="黑屏" type="ColorRect" parent="."]
+visible = false
+z_index = 10
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

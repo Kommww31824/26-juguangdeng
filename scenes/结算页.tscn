@@ -1,0 +1,348 @@
+[gd_scene format=3 uid="uid://6t1jex7vmrym"]
+
+[ext_resource type="Texture2D" uid="uid://npuktq63r7fg" path="res://美术素材/结算页素材/261004小票机2 1.png" id="1_eql4l"]
+[ext_resource type="Texture2D" uid="uid://br7tbs1pyn3p0" path="res://美术素材/结算页素材/Slide 16_9 - 饭异常-结算.png" id="1_tsvo1"]
+[ext_resource type="Texture2D" uid="uid://sudlkriom4ps" path="res://美术素材/结算页素材/261004小票机1 1.png" id="2_43uau"]
+[ext_resource type="Texture2D" uid="uid://dem70e1ir8xi0" path="res://美术素材/结算页素材/结算页头图.png" id="3_0sues"]
+[ext_resource type="Texture2D" uid="uid://b8s6fu6ia650m" path="res://美术素材/结算页素材/实线.png" id="3_g6idi"]
+[ext_resource type="Script" uid="uid://rkjdorcxho2t" path="res://scenes/结算页.gd" id="3_script"]
+[ext_resource type="Texture2D" uid="uid://djn3kphw7tnyd" path="res://美术素材/结算页素材/虚线.png" id="4_orwwp"]
+[ext_resource type="Texture2D" uid="uid://cey2678cl7e21" path="res://美术素材/结算页素材/结算表情1.png" id="4_utpna"]
+[ext_resource type="Texture2D" uid="uid://resngl0je7da" path="res://美术素材/红色选项框.png" id="5_2eaup"]
+[ext_resource type="Texture2D" uid="uid://yi5oovn3tys5" path="res://美术素材/按下时红色选项框.png" id="6_g6idi"]
+[ext_resource type="Texture2D" uid="uid://di6lcv6e07amh" path="res://美术素材/悬停时红色选项框.png" id="7_orwwp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sues"]
+content_margin_left = 28.0
+content_margin_top = 24.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+texture = ExtResource("5_2eaup")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_utpna"]
+content_margin_left = 28.0
+content_margin_top = 24.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+texture = ExtResource("6_g6idi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hn6u3"]
+content_margin_left = 28.0
+content_margin_top = 24.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+texture = ExtResource("7_orwwp")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vdd6l"]
+
+[node name="结算页" type="Node2D" unique_id=2038597913]
+script = ExtResource("3_script")
+
+[node name="底" type="ColorRect" parent="." unique_id=318303383]
+z_index = -1
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="贴图2" type="Sprite2D" parent="." unique_id=1896565234]
+position = Vector2(960, 540)
+texture = ExtResource("1_eql4l")
+
+[node name="纸" type="ColorRect" parent="." unique_id=687710020]
+offset_left = 666.0
+offset_top = 133.0
+offset_right = 1252.0
+offset_bottom = 1050.0
+mouse_filter = 2
+
+[node name="头图贴图" type="Sprite2D" parent="纸" unique_id=965237095]
+position = Vector2(294, 85)
+texture = ExtResource("3_0sues")
+
+[node name="结算页表情" type="Sprite2D" parent="纸" unique_id=109363752]
+position = Vector2(171, 811)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("4_utpna")
+
+[node name="线贴图" type="Node2D" parent="纸" unique_id=924822559]
+position = Vector2(-666, -133)
+
+[node name="Sprite2D" type="Sprite2D" parent="纸/线贴图" unique_id=919070927]
+position = Vector2(961, 379)
+texture = ExtResource("3_g6idi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="纸/线贴图" unique_id=575351540]
+position = Vector2(961, 854)
+texture = ExtResource("3_g6idi")
+
+[node name="Sprite2D3" type="Sprite2D" parent="纸/线贴图" unique_id=245158365]
+position = Vector2(961, 476)
+texture = ExtResource("4_orwwp")
+
+[node name="Sprite2D4" type="Sprite2D" parent="纸/线贴图" unique_id=751351343]
+position = Vector2(961, 606)
+texture = ExtResource("4_orwwp")
+
+[node name="Sprite2D5" type="Sprite2D" parent="纸/线贴图" unique_id=324064867]
+position = Vector2(961, 661)
+texture = ExtResource("4_orwwp")
+
+[node name="Sprite2D6" type="Sprite2D" parent="纸/线贴图" unique_id=1912192266]
+position = Vector2(961, 757)
+texture = ExtResource("4_orwwp")
+
+[node name="标题" type="Label" parent="纸" unique_id=102581869]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 136.0
+offset_right = 546.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "食反外送"
+horizontal_alignment = 1
+
+[node name="副标题" type="Label" parent="纸" unique_id=403818983]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 193.0
+offset_right = 547.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "上食反，食好饭"
+horizontal_alignment = 1
+
+[node name="下单时间" type="Label" parent="纸" unique_id=1173363655]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 255.0
+offset_right = 248.0
+offset_bottom = 291.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "下单时间"
+
+[node name="下单时间值" type="Label" parent="纸" unique_id=78944252]
+layout_mode = 0
+offset_top = 255.0
+offset_right = 338.0
+offset_bottom = 291.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "10月14日 11:00"
+horizontal_alignment = 2
+
+[node name="收货人" type="Label" parent="纸" unique_id=1524743853]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 299.0
+offset_right = 239.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "收货人"
+
+[node name="收货人值" type="Label" parent="纸" unique_id=458476331]
+layout_mode = 0
+offset_left = -147.0
+offset_top = 298.0
+offset_right = 191.0
+offset_bottom = 334.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "良九"
+horizontal_alignment = 2
+
+[node name="商品头" type="Label" parent="纸" unique_id=450359570]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 353.0
+offset_right = 220.0
+offset_bottom = 389.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "商品"
+
+[node name="价格头" type="Label" parent="纸" unique_id=647961141]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 352.0
+offset_right = 538.0
+offset_bottom = 388.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "价格"
+horizontal_alignment = 2
+
+[node name="商品名" type="Label" parent="纸" unique_id=2108187721]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 395.0
+offset_right = 412.0
+offset_bottom = 505.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "麻辣烫"
+autowrap_mode = 3
+
+[node name="商品价格" type="Label" parent="纸" unique_id=1759329855]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 395.0
+offset_right = 539.0
+offset_bottom = 431.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "￥ 12.73"
+horizontal_alignment = 2
+
+[node name="余额" type="Label" parent="纸" unique_id=1636210129]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 483.0
+offset_right = 299.0
+offset_bottom = 519.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "您的余额"
+
+[node name="余额值" type="Label" parent="纸" unique_id=1631374203]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 485.0
+offset_right = 537.0
+offset_bottom = 521.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "￥ 60.00"
+horizontal_alignment = 2
+
+[node name="健康度" type="Label" parent="纸" unique_id=1380022099]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 538.0
+offset_right = 299.0
+offset_bottom = 574.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "健康度"
+
+[node name="当前" type="Label" parent="纸" unique_id=872421816]
+layout_mode = 0
+offset_left = 341.0
+offset_top = 536.0
+offset_right = 539.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "当前"
+horizontal_alignment = 2
+
+[node name="健康说明" type="Label" parent="纸" unique_id=1971312662]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 580.0
+offset_right = 381.0
+offset_bottom = 654.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "您的健康度很饱满。"
+autowrap_mode = 3
+
+[node name="健康心" type="Label" parent="纸" unique_id=1508211808]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 580.0
+offset_right = 541.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "♥♥♥♥♥"
+horizontal_alignment = 2
+
+[node name="拒绝问" type="Label" parent="纸" unique_id=1276422197]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 633.0
+offset_right = 358.0
+offset_bottom = 669.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "您今天拒绝进食了吗？"
+
+[node name="剩余拒绝" type="Label" parent="纸" unique_id=1683056868]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 634.0
+offset_right = 531.0
+offset_bottom = 670.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "剩余拒绝次数"
+horizontal_alignment = 2
+
+[node name="是否拒绝" type="Label" parent="纸" unique_id=1767607566]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 677.0
+offset_right = 219.0
+offset_bottom = 713.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "否"
+
+[node name="剩余拒绝次数值" type="Label" parent="纸" unique_id=1067997234]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 676.0
+offset_right = 540.0
+offset_bottom = 712.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "3"
+horizontal_alignment = 2
+
+[node name="脚注" type="Label" parent="纸" unique_id=1617037428]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 799.0
+offset_right = 617.0
+offset_bottom = 849.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "今天也算吃上了。"
+horizontal_alignment = 1
+
+[node name="贴图1" type="Sprite2D" parent="." unique_id=170147446]
+position = Vector2(960, 540)
+texture = ExtResource("2_43uau")
+
+[node name="参考" type="Sprite2D" parent="." unique_id=1176625613]
+visible = false
+modulate = Color(1, 1, 1, 0.42352942)
+position = Vector2(960, 540)
+texture = ExtResource("1_tsvo1")
+
+[node name="点击" type="Button" parent="." unique_id=628341195]
+offset_right = 1920.0
+offset_bottom = 1080.0
+focus_mode = 0
+flat = true
+
+[node name="下一天" type="Button" parent="." unique_id=1063255283]
+visible = false
+custom_minimum_size = Vector2(342, 149)
+offset_left = 274.0
+offset_top = 475.0
+offset_right = 616.0
+offset_bottom = 624.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0sues")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_utpna")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hn6u3")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0sues")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vdd6l")
+text = "下一天"

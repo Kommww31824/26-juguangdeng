@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://csfydskf6ei3n"]
+
+[ext_resource type="Script" uid="uid://dufvsca1l8gsk" path="res://scenes/吃饭场景麻辣烫.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://c6rqkrpafkyvf" path="res://美术素材/特殊吃外卖演出/麻辣烫/1_bowl 1.png" id="2_bowl"]
+[ext_resource type="Texture2D" uid="uid://x0i8b1jftq8y" path="res://美术素材/特殊吃外卖演出/麻辣烫/2_noodle 1.png" id="3_noodle"]
+[ext_resource type="Texture2D" uid="uid://dubg2oe70rem1" path="res://美术素材/特殊吃外卖演出/麻辣烫/3_tofu 1.png" id="4_tofu"]
+[ext_resource type="Texture2D" uid="uid://cl2je7jcseru6" path="res://美术素材/特殊吃外卖演出/麻辣烫/4_fishball 1.png" id="5_fish"]
+[ext_resource type="Texture2D" uid="uid://bak3ngsh76uqx" path="res://美术素材/特殊吃外卖演出/麻辣烫/5_pakchoi 1.png" id="6_pak"]
+[ext_resource type="Texture2D" uid="uid://b46g2icj1axnw" path="res://美术素材/特殊吃外卖演出/麻辣烫/6_spam 1.png" id="7_spam"]
+[ext_resource type="Texture2D" uid="uid://capm3d1fca6fu" path="res://美术素材/特殊吃外卖演出/麻辣烫/7_sausage 1.png" id="8_sausage"]
+[ext_resource type="Texture2D" uid="uid://bhhfhy15rrb7n" path="res://美术素材/特殊吃外卖演出/麻辣烫/malatang 2.png" id="9_ref"]
+[ext_resource type="StyleBox" uid="uid://b1f7ito2jgxqx" path="res://new_style_box_flat.tres" id="10_riufo"]
+
+[node name="吃饭场景麻辣烫" type="Node2D" unique_id=649085429]
+z_index = 1
+script = ExtResource("1_script")
+
+[node name="参考图" type="Sprite2D" parent="." unique_id=98789779]
+visible = false
+modulate = Color(1, 1, 1, 0.35)
+texture = ExtResource("9_ref")
+
+[node name="碗" type="Sprite2D" parent="." unique_id=1936814579]
+position = Vector2(-30, 24)
+texture = ExtResource("2_bowl")
+
+[node name="面" type="Area2D" parent="." unique_id=1306572281 groups=["麻辣烫小菜"]]
+position = Vector2(-61, 29)
+
+[node name="Sprite2D" type="Sprite2D" parent="面" unique_id=1521931044]
+texture = ExtResource("3_noodle")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="面" unique_id=842352944]
+polygon = PackedVector2Array(-223, 60, -220, 33, -214, 6, -211, -3, -199, -30, -192, -39, -157, -75, -146, -84, -68, -138, -53, -147, -36, -156, -17, -165, 5, -174, 41, -183, 135, -183, 158, -174, 185, -156, 196, -147, 201, -138, 204, -129, 221, -75, 222, -66, 222, -12, 214, 6, 204, 24, 190, 42, 123, 114, 110, 123, 95, 132, 16, 168, -5, 177, -77, 177, -122, 168, -148, 159, -172, 150, -213, 123, -218, 114, -221, 105, -223, 78)
+
+[node name="豆腐" type="Area2D" parent="." unique_id=34152779 groups=["麻辣烫小菜"]]
+z_index = 1
+position = Vector2(26, 228)
+
+[node name="Sprite2D" type="Sprite2D" parent="豆腐" unique_id=940083385]
+texture = ExtResource("4_tofu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="豆腐" unique_id=1739242478]
+polygon = PackedVector2Array(-262, 87.5, -260, 80.5, -255, 66.5, -232, 3.5, -224, -17.5, -218, -31.5, -206, -52.5, -201, -59.5, 182, -157.5, 201, -157.5, 236, -101.5, 260, -59.5, 261, -31.5, 261, 3.5, 255, 10.5, 103, 108.5, 88, 115.5, 72, 122.5, 7, 150.5, -15, 150.5, -139, 143.5, -196, 122.5, -251, 101.5, -262, 94.5)
+
+[node name="鱼丸" type="Area2D" parent="." unique_id=1326175039 groups=["麻辣烫小菜"]]
+z_index = 2
+position = Vector2(230, -72)
+
+[node name="Sprite2D" type="Sprite2D" parent="鱼丸" unique_id=1757368916]
+texture = ExtResource("5_fish")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="鱼丸" unique_id=1585691843]
+polygon = PackedVector2Array(-125.5, -114.5, -121.5, -132.5, -115.5, -150.5, -110.5, -159.5, -102.5, -168.5, -78.5, -186.5, -64.5, -195.5, 16.5, -195.5, 27.5, -186.5, 37.5, -177.5, 46.5, -168.5, 62.5, -141.5, 65.5, -132.5, 121.5, 74.5, 124.5, 101.5, 124.5, 119.5, 113.5, 155.5, 104.5, 164.5, 93.5, 173.5, 81.5, 182.5, 40.5, 191.5, -14.5, 191.5, -31.5, 182.5, -46.5, 173.5, -75.5, 110.5, -118.5, -69.5, -124.5, -96.5, -125.5, -105.5)
+
+[node name="青菜" type="Area2D" parent="." unique_id=13400387 groups=["麻辣烫小菜"]]
+z_index = 3
+position = Vector2(-256, -59)
+
+[node name="Sprite2D" type="Sprite2D" parent="青菜" unique_id=751833623]
+texture = ExtResource("6_pak")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="青菜" unique_id=1559719060]
+polygon = PackedVector2Array(-156, -94, -152, -124, -147, -139, -136, -169, -73, -259, -37, -274, 82, -319, 137, -319, 150, -304, 155, -289, 155, -184, 131, -94, 16, 281, 10, 296, -3, 311, -59, 311, -93, 296, -105, 281, -115, 266, -119, 251, -155, 41, -156, 26)
+
+[node name="午餐肉" type="Area2D" parent="." unique_id=1776475758 groups=["麻辣烫小菜"]]
+z_index = 4
+position = Vector2(-194, -145)
+
+[node name="Sprite2D" type="Sprite2D" parent="午餐肉" unique_id=879224910]
+texture = ExtResource("7_spam")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="午餐肉" unique_id=511600442]
+polygon = PackedVector2Array(-194, 29, -190, 21, -120, -91, -109, -107, 42, -171, 62, -171, 188, -11, 193, -3, 193, 5, 191, 13, 183, 21, 18, 165, -21, 165, -55, 149, -85, 133, -99, 125, -112, 117, -123, 109, -144, 93, -172, 69, -179, 61, -192, 37)
+
+[node name="香肠" type="Area2D" parent="." unique_id=1395480269 groups=["麻辣烫小菜"]]
+z_index = 5
+position = Vector2(-48, -270)
+
+[node name="Sprite2D" type="Sprite2D" parent="香肠" unique_id=1120614553]
+texture = ExtResource("8_sausage")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="香肠" unique_id=167071187]
+polygon = PackedVector2Array(-185.5, 64.5, -183.5, 54.5, -180.5, 44.5, -122.5, -75.5, -117.5, -85.5, -112.5, -90.5, -98.5, -100.5, -88.5, -105.5, -69.5, -110.5, 54.5, -110.5, 85.5, -105.5, 110.5, -100.5, 126.5, -95.5, 141.5, -90.5, 156.5, -80.5, 183.5, -50.5, 184.5, -35.5, 184.5, -30.5, 183.5, -20.5, 181.5, -15.5, 135.5, 79.5, 132.5, 84.5, 127.5, 89.5, 113.5, 94.5, 80.5, 99.5, -129.5, 109.5, -158.5, 109.5, -165.5, 104.5, -174.5, 94.5, -178.5, 89.5, -185.5, 79.5)
+
+[node name="吃完了" type="Button" parent="." unique_id=12372585]
+visible = false
+z_index = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = ExtResource("10_riufo")
+theme_override_styles/pressed = ExtResource("10_riufo")
+theme_override_styles/hover = ExtResource("10_riufo")
+theme_override_styles/disabled = ExtResource("10_riufo")
+theme_override_styles/focus = ExtResource("10_riufo")
+text = "吃完了"

@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://djfg634xaw01o"]
+
+[ext_resource type="Script" uid="uid://dwp16bkocg3e6" path="res://scenes/门.gd" id="2_men"]
+[ext_resource type="Texture2D" uid="uid://djg4t34eqtji1" path="res://美术素材/261004门 1.png" id="2_tynbp"]
+[ext_resource type="StyleBox" uid="uid://b1f7ito2jgxqx" path="res://new_style_box_flat.tres" id="3_a6fbn"]
+[ext_resource type="Texture2D" uid="uid://bx05p2djtiec5" path="res://美术素材/猫眼点击后门外等相关素材/Slide 16_9 - 饭异常-猫眼看门口.png" id="3_of0sb"]
+[ext_resource type="PackedScene" uid="uid://bg82urxn6m1k8" path="res://scenes/退出键.tscn" id="3_quit"]
+[ext_resource type="Texture2D" uid="uid://cc6on0yylgaut" path="res://美术素材/猫眼点击后门外等相关素材/看门外女主头像.png" id="4_tynbp"]
+[ext_resource type="Texture2D" uid="uid://dhbui2hdv2gdv" path="res://美术素材/Group 4521.png" id="6_3tfgf"]
+[ext_resource type="Texture2D" uid="uid://resngl0je7da" path="res://美术素材/红色选项框.png" id="7_ou4ik"]
+[ext_resource type="Texture2D" uid="uid://yi5oovn3tys5" path="res://美术素材/按下时红色选项框.png" id="8_uolp6"]
+[ext_resource type="Texture2D" uid="uid://di6lcv6e07amh" path="res://美术素材/悬停时红色选项框.png" id="9_yemog"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opt"]
+content_margin_left = 28.0
+content_margin_top = 24.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+texture = ExtResource("7_ou4ik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_press"]
+content_margin_left = 28.0
+content_margin_top = 24.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+texture = ExtResource("8_uolp6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hover"]
+content_margin_left = 28.0
+content_margin_top = 24.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+texture = ExtResource("9_yemog")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opt"]
+
+[node name="门" type="Node2D" unique_id=156341582]
+script = ExtResource("2_men")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=295158931]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.13333334, 0.12156863, 0.10980392, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=455961541]
+position = Vector2(1494, 538)
+texture = ExtResource("2_tynbp")
+
+[node name="猫眼" type="Button" parent="." unique_id=599666952]
+offset_left = 1430.0
+offset_top = 293.0
+offset_right = 1562.0
+offset_bottom = 423.0
+theme_override_styles/normal = ExtResource("3_a6fbn")
+theme_override_styles/pressed = ExtResource("3_a6fbn")
+theme_override_styles/hover = ExtResource("3_a6fbn")
+theme_override_styles/disabled = ExtResource("3_a6fbn")
+theme_override_styles/focus = ExtResource("3_a6fbn")
+
+[node name="门外层" type="ColorRect" parent="." unique_id=19389199]
+offset_left = 40.0
+offset_top = 140.0
+offset_right = 1880.0
+offset_bottom = 1020.0
+color = Color(0.08, 0.08, 0.1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="门外层" unique_id=1134723421]
+layout_mode = 0
+offset_left = -40.0
+offset_top = -140.0
+offset_right = 1880.0
+offset_bottom = 940.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="门外走廊" type="Sprite2D" parent="门外层" unique_id=1805886030]
+position = Vector2(920, 400)
+texture = ExtResource("3_of0sb")
+
+[node name="主角头像" type="Sprite2D" parent="门外层" unique_id=1390117698]
+position = Vector2(585, 284)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_tynbp")
+
+[node name="对话框" type="ColorRect" parent="门外层" unique_id=2024989593]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 620.0
+offset_right = 1700.0
+offset_bottom = 820.0
+color = Color(0.12156863, 0.12156863, 0.14117648, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="门外层/对话框" unique_id=312665741]
+position = Vector2(781, -347)
+texture = ExtResource("6_3tfgf")
+
+[node name="对话文本" type="Label" parent="门外层/对话框" unique_id=1927521366]
+layout_mode = 0
+offset_left = 462.0
+offset_top = -435.0
+offset_right = 1109.0
+offset_bottom = -279.0
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="点击推进" type="Button" parent="门外层" unique_id=1024596401]
+layout_mode = 0
+offset_right = 1840.0
+offset_bottom = 880.0
+focus_mode = 0
+flat = true
+
+[node name="拿外卖" type="Button" parent="门外层" unique_id=1743295142]
+custom_minimum_size = Vector2(342, 149)
+layout_mode = 0
+offset_left = 1002.0
+offset_top = 723.0
+offset_right = 1344.0
+offset_bottom = 872.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_opt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_press")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hover")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_opt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_opt")
+text = "取外卖"
+
+[node name="黑屏" type="ColorRect" parent="." unique_id=1017665747]
+visible = false
+z_index = 20
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="退出键" parent="." unique_id=2055489779 instance=ExtResource("3_quit")]
+visible = false
+offset_left = 88.0
+offset_top = 48.0
+offset_right = 248.0
+offset_bottom = 118.0

@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://c1xo3putknjuu"]
+
+[ext_resource type="StyleBox" uid="uid://b1f7ito2jgxqx" path="res://new_style_box_flat.tres" id="1_wc52t"]
+[ext_resource type="Script" uid="uid://bl5dkp2p10m08" path="res://scenes/拼好饭首页按钮.gd" id="1_xdvrr"]
+[ext_resource type="Texture2D" uid="uid://d1e855hbuvjks" path="res://icon.svg" id="2_b3hbt"]
+[ext_resource type="Texture2D" uid="uid://fx03r18bvfn6" path="res://参考图/Frame 3.png" id="3_cwp0l"]
+[ext_resource type="Texture2D" uid="uid://b8py1slv3a0p5" path="res://美术素材/item1.png" id="3_og2lo"]
+[ext_resource type="Texture2D" uid="uid://bae3g0h2qhuo3" path="res://美术素材/Frame 4.png" id="3_ya4r5"]
+[ext_resource type="Texture2D" uid="uid://cr13lap2ug3ve" path="res://美术素材/拼好饭首页按钮食物白底.png" id="4_8ihqk"]
+
+[node name="拼好饭首页按钮" type="Button" unique_id=160462329]
+custom_minimum_size = Vector2(450, 200)
+offset_left = 14.0
+offset_right = 464.0
+offset_bottom = 200.0
+theme_override_styles/normal = ExtResource("1_wc52t")
+theme_override_styles/pressed = ExtResource("1_wc52t")
+theme_override_styles/hover = ExtResource("1_wc52t")
+theme_override_styles/disabled = ExtResource("1_wc52t")
+theme_override_styles/focus = ExtResource("1_wc52t")
+script = ExtResource("1_xdvrr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1407317686]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 443.0
+offset_bottom = 189.0
+mouse_filter = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1521794362]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 3.0
+offset_right = 446.0
+offset_bottom = 200.0
+texture = ExtResource("3_og2lo")
+region_rect = Rect2(0, 0, 445, 177)
+patch_margin_left = 15
+patch_margin_top = 24
+patch_margin_right = 18
+patch_margin_bottom = 16
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1332684896]
+visible = false
+position = Vector2(231, 99)
+texture = ExtResource("3_og2lo")
+
+[node name="饭背景" type="Sprite2D" parent="." unique_id=996140524]
+position = Vector2(80, 107)
+texture = ExtResource("4_8ihqk")
+
+[node name="外卖对应图片" type="Sprite2D" parent="." unique_id=1164609427]
+position = Vector2(81, 108)
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("2_b3hbt")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1045557184]
+position = Vector2(191, 44)
+texture = ExtResource("3_ya4r5")
+
+[node name="价格Label" type="RichTextLabel" parent="." unique_id=917851737]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 150.0
+offset_right = 360.0
+offset_bottom = 217.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.9098039, 0.5803922, 0.039215688, 1)
+bbcode_enabled = true
+text = "¥12.73"
+fit_content = true
+scroll_active = false
+
+[node name="评分Label" type="Label" parent="." unique_id=504428798]
+visible = false
+layout_mode = 0
+offset_left = 206.0
+offset_top = 29.0
+offset_right = 303.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 20
+text = "4.6分"
+
+[node name="口碑小标题Label" type="Label" parent="." unique_id=784445584]
+visible = false
+layout_mode = 0
+offset_left = 222.0
+offset_top = 79.0
+offset_right = 969.0
+offset_bottom = 129.0
+theme_override_font_sizes/font_size = 20
+text = "【\"非常便宜\"】【\"味道好\"】【剡城麻辣烫店第一名】"
+
+[node name="配送时间Label" type="Label" parent="." unique_id=1316016452]
+visible = false
+layout_mode = 0
+offset_left = 301.0
+offset_top = 115.0
+offset_right = 594.0
+offset_bottom = 165.0
+theme_override_font_sizes/font_size = 20
+text = "配送时间：25分钟"
+
+[node name="距离Label" type="Label" parent="." unique_id=438025669]
+visible = false
+layout_mode = 0
+offset_left = 475.0
+offset_top = 116.0
+offset_right = 581.0
+offset_bottom = 166.0
+theme_override_font_sizes/font_size = 20
+text = "2.0km"
+
+[node name="已售份数Label" type="Label" parent="." unique_id=572135059]
+visible = false
+layout_mode = 0
+offset_left = 360.0
+offset_top = 155.0
+offset_right = 478.0
+offset_bottom = 205.0
+theme_override_font_sizes/font_size = 20
+text = "600+份"
+
+[node name="前标签Label" type="Label" parent="." unique_id=205424355]
+visible = false
+layout_mode = 0
+offset_left = 165.0
+offset_top = 28.0
+offset_right = 309.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 20
+text = "超值补贴"
+
+[node name="名字Label" type="Label" parent="." unique_id=855665933]
+visible = false
+layout_mode = 0
+offset_left = 200.0
+offset_top = 31.0
+offset_right = 435.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 20
+text = "七八九麻辣烫3荤8素+主食
+（不看备注）"
+
+[node name="评分店铺名Label" type="RichTextLabel" parent="." unique_id=2098013825]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 24.0
+offset_right = 425.0
+offset_bottom = 95.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.15, 0.15, 0.15, 1)
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[color=#E8940A]★4.6[/color] 七八九老式麻辣烫3荤8素+主食（不看备注）"
+fit_content = true
+scroll_active = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1748323168]
+visible = false
+modulate = Color(1, 1, 1, 0.2784314)
+position = Vector2(245, 104.00001)
+scale = Vector2(1.2044024, 1.2044026)
+texture = ExtResource("3_cwp0l")
+
+[node name="Label" type="Label" parent="." unique_id=474537874]
+clip_contents = true
+layout_mode = 0
+offset_left = 378.0
+offset_top = 159.0
+offset_right = 454.0
+offset_bottom = 200.0
+focus_mode = 3
+theme_override_colors/font_color = Color(0.9098039, 0.5803922, 0.039215688, 1)
+text = "购买>"
+autowrap_mode = 3
+
+[node name="小标签滚动" type="ScrollContainer" parent="." unique_id=1122116806]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 128.0
+offset_right = 440.0
+offset_bottom = 164.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="小标签HBoxContainer" type="HBoxContainer" parent="小标签滚动" unique_id=1122116805]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

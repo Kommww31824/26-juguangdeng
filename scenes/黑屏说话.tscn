@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b0fdk0cmh3ssg"]
+
+[ext_resource type="Texture2D" uid="uid://ce266bf8dnwoe" path="res://美术素材/女主头像1019.png" id="1_pglsc"]
+
+[node name="黑屏说话" type="CanvasLayer" unique_id=1050410936]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=424184802]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1215251367]
+position = Vector2(375, 433)
+texture = ExtResource("1_pglsc")
+
+[node name="Label" type="Label" parent="." unique_id=1787173750]
+offset_left = 620.0
+offset_top = 317.0
+offset_right = 1570.0
+offset_bottom = 882.0
+theme_override_colors/font_color = Color(0.15, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 28
+autowrap_mode = 3

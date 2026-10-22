@@ -1,0 +1,505 @@
+[gd_scene format=3 uid="uid://i6qxo47nv4be"]
+
+[ext_resource type="Script" uid="uid://b3ujq5gbchtxp" path="res://scenes/外卖详细页.gd" id="1_y86lu"]
+[ext_resource type="Texture2D" uid="uid://d1e855hbuvjks" path="res://icon.svg" id="2_sxrj5"]
+[ext_resource type="Texture2D" uid="uid://bn15febchsmpa" path="res://美术素材/说明1.png" id="3_0yfqj"]
+[ext_resource type="Texture2D" uid="uid://dxxyd10io400u" path="res://美术素材/说明2.png" id="3_kanwb"]
+[ext_resource type="PackedScene" uid="uid://bg82urxn6m1k8" path="res://scenes/退出键.tscn" id="3_quit"]
+[ext_resource type="Texture2D" uid="uid://hpyf3hoy0a5d" path="res://美术素材/Frame 9_2.png" id="4_rgdxt"]
+[ext_resource type="Texture2D" uid="uid://bl5towfkxeon6" path="res://美术素材/用户评价.png" id="5_0yfqj"]
+[ext_resource type="Texture2D" uid="uid://cufxxf125qpgn" path="res://美术素材/拼好饭2.png" id="5_06smf"]
+[ext_resource type="Texture2D" uid="uid://41q3naj34t28" path="res://美术素材/说明22.png" id="5_ismng"]
+[ext_resource type="Texture2D" uid="uid://de4fu5kbygwxt" path="res://美术素材/外卖详细页食物白底.png" id="7_ismng"]
+[ext_resource type="StyleBox" uid="uid://b1f7ito2jgxqx" path="res://new_style_box_flat.tres" id="7_kanwb"]
+[ext_resource type="Texture2D" uid="uid://cs8o7n7qu4yvo" path="res://美术素材/Group 27.png" id="8_vuexd"]
+[ext_resource type="Texture2D" uid="uid://dtb6ii6h7gd54" path="res://美术素材/用户评价的用户头像.png" id="9_avatar"]
+[ext_resource type="PackedScene" uid="uid://bw1eke124w14v" path="res://小标签.tscn" id="10_质量保证"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_review_card"]
+content_margin_left = 16.0
+content_margin_top = 14.0
+content_margin_right = 16.0
+content_margin_bottom = 14.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shop_badge"]
+bg_color = Color(0.98039216, 0.79607844, 0.18039216, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_merchant_reply"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.9254902, 0.9254902, 0.9254902, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="外卖详细页" type="Node2D" unique_id=1623592888]
+script = ExtResource("1_y86lu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1913968421]
+physics_interpolation_mode = 0
+offset_left = 1292.0
+offset_top = 33.799988
+offset_right = 1777.0
+offset_bottom = 1050.8
+color = Color(0.9529412, 0.9529412, 0.9529412, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=895125837]
+visible = false
+position = Vector2(883, 535)
+scale = Vector2(1.0277778, 1.0277777)
+texture = ExtResource("5_06smf")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2109108020]
+offset_left = 1290.0
+offset_top = 114.0
+offset_right = 1773.0
+offset_bottom = 954.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=706077998]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Sprite2D2" type="Sprite2D" parent="ScrollContainer/VBoxContainer" unique_id=201358695]
+position = Vector2(239, 694.00006)
+scale = Vector2(1, 0.924)
+texture = ExtResource("3_kanwb")
+
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/VBoxContainer" unique_id=1814427296]
+position = Vector2(239, 485)
+scale = Vector2(1, 0.924)
+texture = ExtResource("3_0yfqj")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ScrollContainer/VBoxContainer" unique_id=1998524051]
+position = Vector2(239, 581.587)
+scale = Vector2(1, 1.1588502)
+texture = ExtResource("5_ismng")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ScrollContainer/VBoxContainer" unique_id=340072043]
+visible = false
+position = Vector2(237, 956.75)
+scale = Vector2(1, 1.4105059)
+texture = ExtResource("5_0yfqj")
+
+[node name="Node2D" type="Node2D" parent="ScrollContainer/VBoxContainer" unique_id=1496736894]
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=1710389715]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer3" unique_id=857750790]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="食物TextureRect2" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer3/Control" unique_id=1021026253]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 3.0
+offset_right = 456.0
+offset_bottom = 415.0
+texture = ExtResource("7_ismng")
+
+[node name="外卖对应食物TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/HBoxContainer3" unique_id=497692572]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+texture = ExtResource("2_sxrj5")
+expand_mode = 3
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer" unique_id=322789174]
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Control" unique_id=2036046126]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 15.0
+offset_right = 484.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 24
+text = "超值补贴"
+
+[node name="价格" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/Control" unique_id=607990506]
+custom_minimum_size = Vector2(20, 100)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 24.0
+offset_right = 440.0
+offset_bottom = 124.0
+theme_override_font_sizes/normal_font_size = 32
+text = "123"
+
+[node name="已售" type="Label" parent="ScrollContainer/VBoxContainer/Control" unique_id=676683943]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 53.0
+offset_right = 394.0
+offset_bottom = 77.0
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer" unique_id=1375773502]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="名字" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/Control4" unique_id=115468596]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 3.0
+offset_right = 437.0
+offset_bottom = 101.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="小标签HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Control4" unique_id=1979013480]
+visible = false
+layout_mode = 0
+offset_left = 37.0
+offset_top = 77.0
+offset_right = 437.0
+offset_bottom = 117.0
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="小词条Label" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=814681991]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "为何实惠 ｜ 固定套餐·薄利多销·集中配送 >"
+
+[node name="Control2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=455392362]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="评分行" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/Control2" unique_id=1059569425]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="左边距" type="Control" parent="ScrollContainer/VBoxContainer/Control2/评分行" unique_id=1059569426]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+
+[node name="评分" parent="ScrollContainer/VBoxContainer/Control2/评分行" unique_id=1376505991 instance=ExtResource("10_质量保证")]
+self_modulate = Color(0.99215686, 0.85490197, 0.88235295, 1)
+layout_mode = 2
+
+[node name="质量保证词条" parent="ScrollContainer/VBoxContainer/Control2/评分行" unique_id=64231588 instance=ExtResource("10_质量保证")]
+self_modulate = Color(0.99215686, 0.85490197, 0.88235295, 1)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/Control2" unique_id=2057042184]
+layout_mode = 2
+text = "    "
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=2136838263]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/HBoxContainer2" unique_id=1100082944]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control" unique_id=596571003]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 3.0
+offset_right = 54.0
+offset_bottom = 27.0
+text = "    "
+
+[node name="配送费Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control" unique_id=1697255492]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 4.0
+offset_right = 145.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.3938459, 0.3938459, 0.39384586, 1)
+theme_override_font_sizes/font_size = 16
+text = "配送费：¥0"
+
+[node name="配送时间距离Label" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/Control" unique_id=161134709]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 3.0
+offset_right = 302.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.3938459, 0.3938459, 0.39384586, 1)
+theme_override_font_sizes/font_size = 16
+text = "25分钟 2.0km"
+
+[node name="详情外边" type="MarginContainer" parent="ScrollContainer/VBoxContainer" unique_id=252790304]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 12
+
+[node name="详情列" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/详情外边" unique_id=325928620]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/详情外边/详情列" unique_id=1589957989]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="店铺卡" type="PanelContainer" parent="ScrollContainer/VBoxContainer/详情外边/详情列" unique_id=1067786508]
+custom_minimum_size = Vector2(442, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_review_card")
+
+[node name="店铺行" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/详情外边/详情列/店铺卡" unique_id=459495105]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="店铺标" type="PanelContainer" parent="ScrollContainer/VBoxContainer/详情外边/详情列/店铺卡/店铺行" unique_id=582371221]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_shop_badge")
+
+[node name="店铺字" type="Label" parent="ScrollContainer/VBoxContainer/详情外边/详情列/店铺卡/店铺行/店铺标" unique_id=1869809657]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "店"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="店铺名称Label" type="Label" parent="ScrollContainer/VBoxContainer/详情外边/详情列/店铺卡/店铺行" unique_id=1941194590]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "店铺名称"
+vertical_alignment = 1
+
+[node name="套餐卡" type="PanelContainer" parent="ScrollContainer/VBoxContainer/详情外边/详情列" unique_id=1301990306]
+custom_minimum_size = Vector2(442, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_review_card")
+
+[node name="套餐列" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/详情外边/详情列/套餐卡" unique_id=898658893]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="套餐内容头" type="Label" parent="ScrollContainer/VBoxContainer/详情外边/详情列/套餐卡/套餐列" unique_id=162547467]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "套餐内容"
+
+[node name="套餐内容Label" type="Label" parent="ScrollContainer/VBoxContainer/详情外边/详情列/套餐卡/套餐列" unique_id=1406539047]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
+theme_override_font_sizes/font_size = 18
+text = "套餐内容"
+autowrap_mode = 3
+
+[node name="套餐规格头" type="Label" parent="ScrollContainer/VBoxContainer/详情外边/详情列/套餐卡/套餐列" unique_id=2036877539]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "套餐规格"
+
+[node name="套餐规格Label" type="Label" parent="ScrollContainer/VBoxContainer/详情外边/详情列/套餐卡/套餐列" unique_id=724252858]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 0.35, 0.35, 1)
+theme_override_font_sizes/font_size = 18
+text = "套餐规格"
+autowrap_mode = 3
+
+[node name="评价外边" type="MarginContainer" parent="ScrollContainer/VBoxContainer" unique_id=1613881569]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="Control3" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/评价外边" unique_id=18668798]
+custom_minimum_size = Vector2(442, 0)
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer/评价外边/Control3" unique_id=1283171542]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="用户评价头" type="Label" parent="ScrollContainer/VBoxContainer/评价外边/Control3" unique_id=915409917]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "用户评价"
+
+[node name="评价卡1" type="PanelContainer" parent="ScrollContainer/VBoxContainer/评价外边/Control3" unique_id=1700852659]
+custom_minimum_size = Vector2(442, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_review_card")
+
+[node name="内容" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡1" unique_id=2131613209]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="用户行" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡1/内容" unique_id=664522717]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="头像" type="TextureRect" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡1/内容/用户行" unique_id=1377432348]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("9_avatar")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="用户名" type="Label" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡1/内容/用户行" unique_id=1985866857]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.15, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 20
+text = "一串神秘的用户名"
+
+[node name="评论文本" type="Label" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡1/内容" unique_id=842106433]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_font_sizes/font_size = 18
+text = "评价内容"
+autowrap_mode = 3
+
+[node name="商家回复" type="PanelContainer" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡1/内容" unique_id=1670558837]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_merchant_reply")
+
+[node name="回复文本" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡1/内容/商家回复" unique_id=2009369882]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.35, 0.35, 0.35, 1)
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[b]商家回复：[/b]回复内容"
+fit_content = true
+scroll_active = false
+
+[node name="评价卡2" type="PanelContainer" parent="ScrollContainer/VBoxContainer/评价外边/Control3" unique_id=1817273892]
+custom_minimum_size = Vector2(442, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_review_card")
+
+[node name="内容" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡2" unique_id=1737353782]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="用户行" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡2/内容" unique_id=1351242035]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="头像" type="TextureRect" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡2/内容/用户行" unique_id=2068945454]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("9_avatar")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="用户名" type="Label" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡2/内容/用户行" unique_id=43973928]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.15, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 20
+text = "路过的拼友"
+
+[node name="评论文本" type="Label" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡2/内容" unique_id=822099934]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_font_sizes/font_size = 18
+text = "评价内容"
+autowrap_mode = 3
+
+[node name="商家回复" type="PanelContainer" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡2/内容" unique_id=381869648]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_merchant_reply")
+
+[node name="回复文本" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/评价外边/Control3/评价卡2/内容/商家回复" unique_id=1286735594]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.35, 0.35, 0.35, 1)
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[b]商家回复：[/b]回复内容"
+fit_content = true
+scroll_active = false
+
+[node name="附近拼单Label" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=665155342]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "附近【10】人拼单，两个拼单头像 + 随机码用户名"
+
+[node name="底边栏Label" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1090350943]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "价格 ¥12.73 ｜ 立即配送 25分钟送达"
+
+[node name="Button" type="Button" parent="." unique_id=1305153780]
+offset_left = 1322.0
+offset_top = 962.00006
+offset_right = 1636.0
+offset_bottom = 1016.00006
+scale = Vector2(1.3, 1.3)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.47397602, 0.4739756, 0.47397572, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.4745098, 0.4745098, 0.4745098, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("7_kanwb")
+theme_override_styles/pressed = ExtResource("7_kanwb")
+theme_override_styles/hover = ExtResource("7_kanwb")
+icon = ExtResource("4_rgdxt")
+icon_alignment = 1
+
+[node name="退出键" parent="." unique_id=1207024349 instance=ExtResource("3_quit")]
+offset_left = 1301.0
+offset_top = 41.0
+offset_right = 1359.0
+offset_bottom = 104.0
+theme_override_styles/normal = ExtResource("7_kanwb")
+theme_override_styles/pressed = ExtResource("7_kanwb")
+theme_override_styles/hover = ExtResource("7_kanwb")
+theme_override_styles/disabled = ExtResource("7_kanwb")
+theme_override_styles/focus = ExtResource("7_kanwb")
+text = ""
+icon = ExtResource("8_vuexd")
+icon_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=979350913]
+visible = false
+modulate = Color(1, 1, 1, 0.32941177)
+position = Vector2(1538, 501)
+scale = Vector2(1.41, 1.4099998)
+texture = ExtResource("5_06smf")
+
+[node name="按钮上价格Label" type="Label" parent="." unique_id=572920821]
+offset_left = 1378.0
+offset_top = 972.0
+offset_right = 1539.0
+offset_bottom = 1031.0
+size_flags_vertical = 1
+focus_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "123"
+autowrap_trim_flags = 128
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
